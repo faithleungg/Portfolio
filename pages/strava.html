@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Strava Workout builder</title>
+
+    <link rel="stylesheet" href="../css/styleguide.css" />
+  </head>
+
+  <body>
+    <section class="main-content">
+      <!-- TOP NAVIGATION BAR -->
+      <div class="top-content">
+        <nav class="navigation">
+          <div class="nav-right">
+            <a class="nav-button" href="../index.html">FAITH L.</a>
+          </div>
+          <div class="nav-left">
+            <!-- <a class="nav-button" href="pages/about.html">ABOUT ME</a> -->
+            <a
+              class="nav-button"
+              href="https://drive.google.com/file/d/1vFOX2Vz1et0-SpdUM6M_4npvI2WVYPcP/view?usp=sharing"
+              target="_blank"
+              >RESUME</a
+            >
+          </div>
+        </nav>
+      </div>
+
+      <!-- TOP CASE TITLE AND DESCRIPTION -->
+      <a class="back-button" href="../index.html">← BACK</a>
+
+      <div class="case-top">
+        <div class="case-title">
+          <h1>Strava</h1>
+          <p>2025</p>
+        </div>
+
+        <div class="case-details">
+          <div class="project-details">
+            <p class="pink-medium">Project</p>
+            <p class="keywords">4 weeks</p>
+            <p class="keywords">User Research</p>
+            <p class="keywords">UX/UI Design</p>
+            <p class="keywords">Prototype</p>
+          </div>
+
+          <div class="team-details">
+            <p class="pink-medium">Team</p>
+            <p class="keywords">Caleb Wu</p>
+            <p class="keywords">Meghna Rajamohan</p>
+            <p class="keywords">Rebecca Yeung</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL BLEED IMAGE -->
+      <div>
+        <img
+          class="case-img"
+          src="../assets/Strava-1.png"
+          alt="Image of biker and runner to reflect Strava's cardio-sport-nature"
+        />
+      </div>
+
+      <!-- CASE CONTENT -->
+      <div class="case-content">
+        <div class="case-chunk">
+          <h4>
+            <!-- CONTEXT -->
+            Strava is a performance tracking app. But secondly, a social
+            platform for athletes. Our team created an in-house workout builder
+            feature.
+          </h4>
+          <h4>
+            I built the workout recording flow to accommodate the new workout
+            builder.
+          </h4>
+        </div>
+
+        <div class="case-chunk">
+          <img
+            class="case-img"
+            src="../assets/Strava-2.png"
+            alt="Mockup of final feature UI"
+          />
+        </div>
+
+        <div class="case-chunk">
+          <h3>The Problem</h3>
+          <h4>
+            Strava lacks a unified system for non-cardio workouts, forcing users
+            to rely on external apps to plan, track, and compete a workout, all
+            while still tracking progress on Strava.
+          </h4>
+        </div>
+
+        <div class="case-chunk">
+          <div>
+            <h3>Identifying the Issue</h3>
+          </div>
+
+          <div>
+            <h4>
+              After interviewing 9 users, the majority of them felt these three
+              ways:
+            </h4>
+          </div>
+
+          <div class="research-container">
+            <div class="finding-box">
+              <h1>91%</h1>
+              <h5>
+                of users said switching between multiple apps disrupted their
+                workout momentum
+              </h5>
+            </div>
+
+            <div class="finding-box">
+              <h1>75%</h1>
+              <h5>
+                of users felt premium paywalls blocked features they wanted
+              </h5>
+            </div>
+
+            <div class="finding-box">
+              <h1>89%</h1>
+              <h5>
+                of users valued keeping all their progress tracking in one place
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>Our Approach</h3>
+          <h4>
+            A workout block builder to manage cardio and non-cardio activities
+            in one platform.
+          </h4>
+
+          <div class="video-display bg1">
+            <video width="230" height="542" autoplay loop>
+              <!--https://www.w3schools.com/html/html5_video.asp-->
+              <source src="../assets/Recorder-Walkthrough.mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>Folder Organization</h3>
+          <h4>
+            To help users navigate their workouts efficiently, I introduced a
+            folder-based structure that lets them group routines by goals or
+            training style.
+          </h4>
+          <h4>
+            Within a dedicated page, workouts are organized into these folders,
+            each preview revealing key details, including total time and number
+            of blocks. This helps users choose a routine effectively.
+          </h4>
+
+          <div class="video-display bg2">
+            <video width="230" height="542" autoplay loop>
+              <!--https://www.w3schools.com/html/html5_video.asp  https://www.w3schools.com/tags/att_video_loop.asp-->
+              <source src="../assets/Folders-Walkthrough.mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>Workout Overview</h3>
+          <h4>
+            Selecting a workout navigates to an overview with clear CTAs to
+            start.
+          </h4>
+          <h4>
+            I reviewed existing workout platforms to clarify which features
+            users value most at this stage. With that, I identified three
+            essential controls to surface:
+          </h4>
+          <div class="cta-collage">
+            <div class="cta-display">
+              <img
+                class="cta-button"
+                src="../assets/Bluetooth.svg"
+                alt="Bluetooth button"
+              />
+              <img
+                class="cta-button"
+                src="../assets/Play.svg"
+                alt="Play/start button"
+              />
+              <img
+                class="cta-button"
+                src="../assets/Sound.svg"
+                alt="Sound toggle button"
+              />
+            </div>
+
+            <div class="mockup-background">
+              <img
+                class="mockup-content"
+                width="230"
+                height="542"
+                src="../assets/CTA-Page.svg"
+                alt="Mockup of individual workout page overview"
+              />
+              <h5 class="mockup-content">
+                Buttons are contrasted in Strava's signature orange and placed
+                in the bottom-right corner for easy, intuitive access.
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>Timers</h3>
+          <h4>
+            To help users stay focused without overwhelming them, the screen
+            also uses a dual-timer system.
+          </h4>
+          <h3>
+            Workouts also start with a three-second countdown, giving users time
+            to transition smoothly into the first exercise.
+          </h3>
+          <div class="timer-display">
+            <div class="timer-container1">
+              <img
+                class="mockup-content"
+                src="../assets/Time-Elapsed-Timer.svg"
+                alt="Image of time elapsed timer with progress bar"
+              />
+              <p>
+                A timer at the top displays total time elapsed, giving users a
+                sense of progress.
+              </p>
+            </div>
+
+            <div class="timer-container">
+              <img
+                class="mockup-content"
+                src="../assets/Time-Remaining-Timer.svg"
+                alt="Image of time remaining timer with text underneath"
+              />
+              <p>
+                A central timer shows the remaining time for the current
+                exercise.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>Color Coded Exercises</h3>
+          <h4>
+            Current exercises are titled and colour-coded. These colours map
+            back to the custom block builder, creating consistent visual links
+            so users can quickly recognize what type of activity they’re doing.
+          </h4>
+          <div class="color-container">
+            <img
+              src="../assets/Activity-Type.svg"
+              alt="row of color coded activity names"
+            />
+            <img
+              src="../assets/Activity-Presets.svg"
+              alt="grid of activity presets from the block builder"
+            />
+            <h5>(Blocks from the workout builder!)</h5>
+          </div>
+
+          <!-- SHOWCASE COLOR CODES -->
+        </div>
+
+        <div class="case-chunk">
+          <h3>Set-based Exercises</h3>
+          <h4>
+            Within a divided ellipse, each segment fills as a set is completed,
+            offering a simple understanding of progress in the set without
+            disrupting focus.
+          </h4>
+          <div class="video-display bg3">
+            <video width="230" height="542" autoplay loop>
+              <source src="../assets/Set-Timer.mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>Progress Indicators</h3>
+          <h4>
+            A horizontal progress bar along the top shows the user’s position
+            within the entire workout. This gives a clear sense of pacing while
+            still keeping the interface minimal.
+          </h4>
+          <img
+            src="../assets/Progress-Bar.svg"
+            alt="Progress bar almost halfway through, colored in orange"
+          />
+        </div>
+
+        <div class="case-chunk">
+          <h3>Haptic Feedback</h3>
+          <h4>
+            Instead of looking at the screen constantly, our feature
+            incorporates haptic cues, sounds or vibrations for watch users that
+            signal when to start, stop, or transition to the next exercise,
+            creating an experience that remains intuitive and hands-free.
+          </h4>
+          <div class="watch-mockup">
+            <img
+              src="../assets/Haptic-Watch.svg"
+              alt="Watch mockup to represent haptic feedback"
+            />
+          </div>
+        </div>
+
+        <div class="case-chunk">
+          <h3>What I learned.</h3>
+          <h4>
+            Working on this feature taught me that designing for active users
+            means prioritizing convenience and efficiency above all. I learned
+            how to highlight the truly essential interactions and present it in
+            a way that supports users’ workouts without breaking their momentum.
+            Small design choices, like clear timers and progress indicators, can
+            make the experience effortless and intuitive.
+          </h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="footer-icons">
+        <a
+          href="https://www.linkedin.com/in/faith-leung-"
+          class="icon-link"
+          target="_blank"
+        >
+          <!-- target="_blank" opens a new tab-->
+          <img
+            src="../assets/LinkedIn.svg"
+            alt="LinkedIn logo leads to external profile link"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="mailto:faithleung28@gmail.com" class="icon-link">
+          <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_mailto -->
+          <img
+            src="../assets/Email.svg"
+            alt="Email logo opens up email contact template"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>Designed and coded by me!</p>
+        <h6>Faith Leung © 2026</h6>
+      </div>
+    </section>
+  </body>
+</html>

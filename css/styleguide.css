@@ -1,0 +1,879 @@
+@font-face {
+  font-family: "JettBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2"); /* .. goes back a folder */
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("..fonts/SFPRODISPLAYREGULAR.woff2") format(woff2);
+  font-weight: 400; /*regular weight*/
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("..fonts/SFPRODISPLAYMEDIUM.woff2") format(woff2);
+  font-weight: 550; /*medium weight*/
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("..fonts/SFPRODISPLAYBOLD.woff2") format(woff2);
+  font-weight: 700; /*bold weight*/
+}
+
+body {
+  background-color: black;
+  font-family: "SF Pro Display", sans-serif;
+  margin: 1rem;
+}
+
+/* HEADINGS */
+h1 {
+  /* for case titles */
+  font-size: 2.5rem;
+  font-weight: 550;
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  /* for case subtitles */
+  font-size: 2rem;
+  font-weight: 550;
+  color: white;
+  margin: 0;
+}
+
+h3 {
+  /*for bio and case descriptions */
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: grey;
+  margin: 0;
+}
+
+h4 {
+  /* smaller headers */
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  /* for footer text */
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: grey;
+  margin-top: -0.8rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.project-keywords p {
+  font-weight: 300;
+  color: white;
+}
+
+.keywords {
+  margin: 0.1rem;
+  font-weight: 300;
+  color: white;
+}
+
+.pink-medium {
+  color: #ffa3fa;
+  font-weight: 550;
+}
+
+.orange-highlight {
+  color: #ff5300;
+  font-weight: 500;
+}
+
+a {
+  font-size: 1rem;
+  font-family: "JettBrains Mono";
+  color: white;
+  text-decoration: none;
+}
+
+.right-aligned-button {
+  display: block; /*<a> spans full width of screen*/
+  width: 100%;
+  text-align: right;
+  /* margin-top: 0.5rem; */
+}
+
+.right-aligned-button:hover,
+.right-aligned-button:focus,
+.right-aligned-button:active {
+  color: #ffa3fa;
+  transition-property: color;
+  transition-duration: 0.05s;
+}
+
+.nav-button {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.nav-button:hover,
+.nav-button:focus,
+.nav-button:active {
+  color: #ffa3fa;
+  transition-property: color;
+  transition-duration: 0.05s;
+}
+
+.back-button {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  /* margin-top: 6rem;
+} */
+}
+
+.top-content {
+  margin-bottom: 6rem;
+}
+
+.back-button:hover,
+.back-button:focus,
+.back-button:active {
+  color: #ffa3fa;
+  transition-property: color;
+  transition-duration: 0.05s;
+}
+
+.navigation {
+  display: flex;
+  padding-top: 0.5rem;
+  justify-content: space-between; /*pushes to opposite ends*/
+}
+.nav-left {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.middle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1rem;
+  margin-top: 6rem;
+  width: 40%;
+}
+
+/* .projects {
+  margin-top: 6rem;
+} */
+
+.projects {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.05rem;
+}
+
+.projects img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* .project-display {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.project-display {
+  position: relative;
+  color: white;
+}
+
+/* title, description, and keywords */
+.project-top {
+  position: absolute;
+  top: 32px;
+  left: 36px;
+  right: 36px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.project-image {
+  opacity: 100%;
+  width: 100%;
+  transition-duration: 150ms;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-image:hover,
+.project-image:focus {
+  opacity: 80%;
+}
+
+.project-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column; /*stack icons above text*/
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+/* CASE STYLING */
+
+.case-details {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.case-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 1rem 4rem 1rem;
+}
+
+.case-content {
+  margin: 6rem 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.case-chunk {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case-img {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-vid {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 85%;
+}
+
+.video-crop {
+  width: 100%;
+  height: 28rem;
+  overflow: hidden;
+}
+
+.three-container-h {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.three-container-v {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.problem-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  padding: 2rem 0;
+}
+
+.problem-list-point {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center; /* this means vertically */
+  background-color: #ff5300;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.problem-list-point h1 {
+  width: 2rem; /* makes 01 and 02 the same width */
+}
+.feature-showcase1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 12rem;
+  text-align: center;
+  gap: 4rem;
+}
+
+.feature-showcase2 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 1rem;
+}
+
+.reflection {
+  margin: 16rem 20rem;
+}
+
+.research-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: stretch; /*https://www.w3schools.com/cssref/css3_pr_align-items.php*/
+  margin-top: 2rem;
+}
+
+.finding-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1; /*https://www.w3schools.com/cssref/css3_pr_flex.php*/
+  background-color: #ff5300;
+  padding: 12rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* .finding-box:hover,
+finding-box:focus {
+  transform: translateY(
+    -2rem
+  ); /*https://www.w3schools.com/cssref/css3_pr_transform.php box will go up 2rem 
+} */
+
+.findings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  background-color: #161616;
+  border-radius: 0.5rem;
+  padding: 4rem 8rem;
+  text-align: center;
+}
+.video-display {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* https://www.w3schools.com/cssref/pr_background-image.php */
+  background-size: cover; /*fills size of container */
+  background-position: center;
+
+  padding: 2.5rem;
+  margin-top: 2rem;
+
+  z-index: 1;
+}
+
+.video-display.bg1 {
+  background-image: url("../assets/Runners.jpeg");
+}
+
+.video-display.bg2 {
+  background-image: url("../assets/Biker.png");
+}
+
+.video-display.bg3 {
+  background-image: url("../assets/Runner3.png");
+}
+
+/* https://www.w3schools.com/cssref/sel_before.php */
+.video-display::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top botoom right left */
+  background: rgba(0, 0, 0, 0.75); /* overlay */
+  z-index: 0;
+}
+
+video {
+  position: relative;
+  z-index: 2;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.3rem #000000bd; /* used box-shadow instead of filter because i screenrecorded a video without rounded corners https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+.cta-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  background-color: #161616;
+  padding: 6rem 0;
+}
+
+.cta-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ff5300;
+  border-radius: 100rem;
+  padding: 1rem;
+  transition-property: background-color;
+  transition-duration: 100ms;
+}
+
+.cta-button:hover {
+  /* no focus state bc it's a purely visual add on, don't want to confuse for a possible actual button */
+  background-color: #c94000;
+}
+
+.cta-collage {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mockup-background {
+  display: grid;
+  grid-template-columns: 1fr 5.5fr;
+  align-items: flex-end;
+  gap: 2rem;
+  position: relative;
+
+  background-image: url("../assets/Runner2.png");
+  background-size: cover; /*fills size of container */
+  background-position: center;
+  padding: 2rem;
+
+  z-index: 1;
+}
+
+.mockup-background::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top botoom right left */
+  background: rgba(0, 0, 0, 0.7); /* overlay */
+  z-index: 0;
+}
+
+.mockup-content {
+  position: relative;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(
+    0 0 0.3rem #000000bd
+  ); /* https://www.w3schools.com/cssref/css3_pr_filter.php */
+  z-index: 2;
+}
+
+.timer-display {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: #161616;
+  padding: 2rem 4rem;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+.timer-container1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: #161616;
+  padding: 4rem 4rem 2rem 4rem;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.color-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 8rem 12rem;
+  text-align: center;
+  background-color: #161616;
+  margin-top: 2rem;
+}
+
+.watch-mockup {
+  position: relative;
+
+  background-image: url("../assets/Weighlifting.jpeg");
+  background-size: cover; /*fills size of container */
+  background-position: center;
+  padding: 2rem 2rem 2rem 2rem;
+
+  z-index: 1;
+
+  margin-top: 2rem;
+}
+
+.ss-reflection-chunk {
+}
+
+.watch-mockup::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top botoom right left */
+  background: rgba(0, 0, 0, 0.7); /* overlay */
+  z-index: 2;
+}
+
+.watch-mockup img {
+  position: relative;
+  z-index: 2; /* on top of overlay */
+}
+
+.icon-link img {
+  transition-duration: 150ms;
+}
+.icon-link:hover img,
+.icon-link:active img {
+  scale: 1.1;
+}
+@media (max-width: 92rem) {
+  /* HEADINGS */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  a {
+    font-size: 0.8rem;
+  }
+
+  .case-content {
+    margin: 4rem 10rem;
+    gap: 6rem;
+  }
+
+  .research-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    align-items: stretch;
+    margin-top: 1rem;
+  }
+
+  .finding-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1; /*https://www.w3schools.com/cssref/css3_pr_flex.php*/
+    background-color: #ff5300;
+    padding: 6rem 1rem 1rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .case-top {
+    margin-bottom: 2rem;
+  }
+
+  .watch-mockup img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 64rem) {
+  .cta-collage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-display {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+  }
+
+  .mockup-background {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mockup-content {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .timer-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 2rem;
+  }
+
+  .timer-container,
+  .timer-container1 {
+    padding: 1rem; /* smaller padding */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .color-container {
+    padding: 6rem 8rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  /* HEADINGS */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  a {
+    font-size: 0.8rem;
+  }
+
+  .case-content {
+    margin: 4rem 2rem;
+    gap: 4rem;
+  }
+
+  .top-content {
+    margin-bottom: 6rem;
+  }
+
+  .navigation {
+    display: flex;
+    padding-top: 0.2rem;
+    justify-content: space-between; /*pushes to opposite ends*/
+  }
+  .nav-left {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .top-content {
+    margin-bottom: 2rem;
+  }
+
+  .middle-content {
+    width: 80%;
+  }
+
+  .project-display {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-keywords {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .project-keywords p {
+    font-weight: 300;
+    color: lightgray;
+  }
+
+  .case-content {
+    margin: 2rem 4rem;
+    gap: 4rem;
+  }
+
+  .case-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .case-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pink-medium {
+    margin: 0;
+  }
+
+  .finding-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1; /*https://www.w3schools.com/cssref/css3_pr_flex.php*/
+    background-color: #ff5300;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .research-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .cta-collage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mockup-background {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mockup-content {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .color-container {
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .watch-mockup img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 28rem) {
+  body {
+    margin: 0.5rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .case-chunk {
+    gap: 1rem;
+  }
+
+  .research-container {
+    margin-top: 1rem;
+  }
+  /* .timer-display {
+    display: grid;
+    grid-template-columns: 1fr;
+  } */
+
+  .cta-display {
+    padding: 2rem 0;
+  }
+
+  .case-content {
+    margin: 1rem;
+    gap: 4rem;
+  }
+
+  .mockup-content {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    padding: 0.5rem;
+  }
+
+  .color-container {
+    padding: 1.5rem;
+  }
+}
