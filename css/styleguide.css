@@ -575,6 +575,11 @@ video {
 }
 
 .ss-reflection-chunk {
+  display: grid;
+  grid-template-columns: 1.2fr 3fr;
+}
+.ss-reflection-chunk h5 {
+  padding-bottom: 1rem;
 }
 
 .watch-mockup::before {
@@ -588,6 +593,29 @@ video {
 .watch-mockup img {
   position: relative;
   z-index: 2; /* on top of overlay */
+}
+
+.results-indiv {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #161616;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.results-indiv h1 {
+  font-size: 5.5rem;
+}
+
+.results-row {
+  display: grid;
+  row-gap: 0.5rem; /* vertical space between the two rows */
+}
+
+.results-row-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* horizontal spacing within a row */
+  gap: 0.5rem;
 }
 
 .icon-link img {
